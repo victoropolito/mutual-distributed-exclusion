@@ -1,0 +1,15 @@
+# Dockerfile-server
+FROM python:3.9-slim
+
+WORKDIR /app
+
+# Copia o script do servidor
+COPY server.py .
+
+# Instala dependências (se necessário)
+RUN pip install flask
+
+# Expõe a porta do servidor
+EXPOSE 5000
+
+CMD ["python", "server.py"]

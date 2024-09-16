@@ -1,0 +1,16 @@
+docker-compose build                            (Constuir as imagens docker)
+docker-compose up                               (Subir o ambiente Docker)
+docker-compose up -d                            (Executar em segundo plano)
+docker-compose logs                             (Visualizar logs dos contêineres)
+docker-compose logs server                      (Visualizar logs dos contêineres - específicos)
+docker-compose stop                             (Para os contêineres)
+docker-compose down                             (Parar e remover os contêineres)
+docker-compose up --build                       (Reconstruir o ambiente)
+docker exec -it <container_name> /bin/bash      (Acessar um contêiner em execução)
+docker ps                                       (Verificar o estado dos contêineres)
+cat ./shared/resource.txt                       (Verificar o conteúdo do arquivo de log)
+docker-compose down --volumes --remove-orphans  (Remover volumes e redes persistentes (opcional))
+
+
+#### Principal ####
+docker-compose up --build
