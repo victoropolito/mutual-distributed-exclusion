@@ -1,12 +1,14 @@
 # Dockerfile-node
 FROM python:3.9-slim
 
+USER root
+
 WORKDIR /app
 
 # Copia o script do cliente (nó)
 COPY node.py .
 
 # Instala dependências (se necessário)
-RUN pip install requests
+RUN pip install requests flask
 
 CMD ["python", "node.py"]
